@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/favorites_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:visibility="gone"/>
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="@string/search_placeholder"
+        android:iconifiedByDefault="false"
+        android:imeOptions="actionSearch"
+        android:inputType="textCapWords|textAutoCorrect"
+        android:id="@+id/search_bar"/>
+
+    <fragment
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:id="@+id/map"
+        tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/metric_switch_off"
+        android:id="@+id/metric_switch"
+        android:padding="5sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/forecast_info"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/forecast_title"
+            android:textColor="@color/colorBlack"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/api_data">
+
+            <TextView
+                style="@style/ForecastTextView"
+                android:id="@+id/location_label"
+                android:textStyle="bold"
+                android:text="@string/location_label"/>
+
+            <TextView
+                style="@style/ForecastTextView"
+                android:id="@+id/location_value"
+                android:layout_toEndOf="@id/location_label"/>
+
+            <TextView
+                style="@style/ForecastTextView"
+                android:id="@+id/conditions_label"
+                android:textStyle="bold"
+                android:text="@string/conditions_label"
+                android:layout_below="@id/location_label"/>
+
+            <TextView
+                style="@style/ForecastTextView"
+                android:id="@+id/conditions_value"
+                android:layout_below="@id/location_value"
+                android:layout_toEndOf="@id/conditions_label"/>
+
+            <TextView
+                style="@style/ForecastTextView"
+                android:id="@+id/high_label"
+                android:textStyle="bold"
+                android:text="@string/high_label"
+                android:layout_below="@id/conditions_label"/>
+
+            <TextView
+                style="@style/ForecastTextView"
+                android:id="@+id/high_value"
+                android:layout_toEndOf="@id/high_label"
+                android:layout_below="@id/conditions_value"/>
+
+            <TextView
+                style="@style/ForecastTextView"
+                android:id="@+id/low_label"
+                android:textStyle="bold"
+                android:text="@string/low_label"
+                android:layout_below="@id/high_label"/>
+
+            <TextView
+                style="@style/ForecastTextView"
+                android:id="@+id/low_value"
+                android:layout_toEndOf="@id/low_label"
+                android:layout_below="@id/high_value"/>
+
+            <TextView
+                style="@style/ForecastTextView"
+                android:id="@+id/humidity_label"
+                android:textStyle="bold"
+                android:text="@string/humidity_label"
+                android:layout_below="@id/low_label"/>
+
+            <TextView
+                style="@style/ForecastTextView"
+                android:id="@+id/humidity_value"
+                android:layout_toEndOf="@id/humidity_label"
+                android:layout_below="@id/low_value"/>
+
+            <TextView
+                style="@style/ForecastTextView"
+                android:id="@+id/wind_speed_label"
+                android:textStyle="bold"
+                android:text="@string/wind_speed_label"
+                android:layout_below="@id/humidity_label"/>
+
+            <TextView
+                style="@style/ForecastTextView"
+                android:id="@+id/wind_speed_value"
+                android:layout_toEndOf="@id/wind_speed_label"
+                android:layout_below="@id/humidity_value"/>
+
+            <TextView
+                style="@style/ForecastTextView"
+                android:id="@+id/cloud_cover_label"
+                android:textStyle="bold"
+                android:text="@string/cloud_cover_label"
+                android:layout_below="@id/wind_speed_label"/>
+
+            <TextView
+                style="@style/ForecastTextView"
+                android:id="@+id/cloud_cover_value"
+                android:layout_toEndOf="@id/cloud_cover_label"
+                android:layout_below="@id/wind_speed_value"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_remove_button"
+            android:text="@string/add_favorites_button"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/favorites_button"
+        android:text="@string/favorites_button"
+        android:textAllCaps="false"/>
+
+</LinearLayout>

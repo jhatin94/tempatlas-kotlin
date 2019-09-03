@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView android:id="@+id/no_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:padding="5sp"
+        android:textSize="16sp"
+        android:text="@string/no_data_label" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/list"
+        android:name="com.jhatin.tempatlas.FavoritesFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="5sp"
+        android:layout_marginEnd="5sp"
+        app:layoutManager="LinearLayoutManager"
+        tools:context=".fragments.FavoritesFragment"
+        tools:listitem="@layout/fragment_favorites" />
+</LinearLayout>

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">TempAtlas-Kotlin</string>
+    <string name="title_activity_main">TempAtlas</string>
+    <string name="metric_switch_off">Enable Metric Units:</string>
+    <string name="search_placeholder">Enter city name</string>
+    <string name="forecast_title">Forecast</string>
+    <string name="favorites_button">See All Favorites</string>
+    <string name="add_favorites_button">Add to Favorites</string>
+    <string name="remove_favorites_button">Remove from Favorites</string>
+    <string name="location_label">Location:</string>
+    <string name="conditions_label">Conditions:</string>
+    <string name="high_label">High:</string>
+    <string name="low_label">Low:</string>
+    <string name="humidity_label">Humidity:</string>
+    <string name="wind_speed_label">Wind Speed:</string>
+    <string name="cloud_cover_label">Cloud Cover:</string>
+    <string name="no_data_label">No Favorites Yet</string>
+
+    <!--Placeholder strings-->
+    <string name="conditions_response">%1$s, %2$.2f°</string>
+    <string name="temperature_placeholder">%1$.2f°</string>
+    <string name="percentage_placeholder">%1$.2f%%</string>
+    <string name="percentage_int_placeholder">%1$d%%</string>
+    <string name="imperial_speed_placeholder">%1$.2f mph</string>
+    <string name="metric_speed_placeholder">%1$.2f m/s</string>
+
+    <!--Constant strings-->
+    <string name="temp_atlas_prefs">temp_atlas_prefs</string>
+    <string name="favorites_pref_key">FAVORITE_FORECASTS</string>
+    <string name="fragment_back_stack_id">FRAGMENT_STACK</string>
+</resources>
