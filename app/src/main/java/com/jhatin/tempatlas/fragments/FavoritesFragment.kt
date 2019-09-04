@@ -58,7 +58,7 @@ class FavoritesFragment : Fragment() {
         // determine if no data text should appear
         val noDataView = view.findViewById<TextView>(R.id.no_data)
         noDataView.visibility = when {
-            favoritesCollection.count() > 0 -> View.GONE
+            favoritesCollection.isNotEmpty() -> View.GONE
             else -> View.VISIBLE
         }
     }
