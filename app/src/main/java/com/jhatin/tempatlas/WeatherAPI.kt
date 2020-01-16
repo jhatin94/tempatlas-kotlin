@@ -16,7 +16,7 @@ object WeatherAPI {
 
     var units = Units.IMPERIAL
     private val mBaseApiUrl = "https://api.openweathermap.org/data/2.5/weather?"
-    private val mAppId = "&APPID=f286e2990fed460a17964af2d80b3c60"
+    private val mAppId = "&APPID=YOUR_APP_ID_HERE"
 
     fun getWeatherBy(city: String, completionHandler: (Boolean, WeatherResponse.Forecast?) -> Unit) {
         val encodedCity = URLEncoder.encode(city, "UTF-8")
